@@ -1,0 +1,21 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>
+      {{currentArticle.name}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Prix : {{currentArticle.price}}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Info : {{currentArticle.info}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card-content>
+
+</ion-card>
+<ion-footer>
+  <ion-button color="secondary" size="large" (click)="close()">Fermer</ion-button>
+</ion-footer>

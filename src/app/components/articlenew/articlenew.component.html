@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-title>
+    Création article
+  </ion-title>
+</ion-header>
+<ion-content>
+  <form [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nom du produit</ion-label>
+      <ion-input formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Prix</ion-label>
+      <ion-input type="number" formControlName="price"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Description</ion-label>
+      <ion-textarea formControlName="info"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-toolbar>
+        <ion-button slot="start" color="danger" (click)="cancel()">Annuler</ion-button>
+        <ion-button slot="end" color="success" type="submit">Valider</ion-button>
+      </ion-toolbar>
+    </ion-item>
+  </form>
+</ion-content>

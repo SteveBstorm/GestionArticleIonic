@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-icon slot="start" name="basket"></ion-icon>Votre panier
+      <ion-label slot="end">{{cartTotal | currency: 'EUR'}}</ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let a of cart">
+      <ion-toolbar>
+        <ion-label slot="start">{{a.name}} : {{a.quantity}}</ion-label>
+        <ion-button slot="end" (click)="addQty(a.id)" ><ion-icon name="add-circle"></ion-icon></ion-button>
+        <ion-button slot="end" (click)="remQty(a.id)" ><ion-icon name="remove-circle"></ion-icon></ion-button>
+      </ion-toolbar>
+    </ion-item>
+  </ion-list>
+</ion-content>

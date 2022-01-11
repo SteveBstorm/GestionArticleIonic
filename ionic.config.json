@@ -1,0 +1,7 @@
+{
+  "name": "GestionArticleIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
