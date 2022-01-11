@@ -10,28 +10,27 @@ import { PanierService } from 'src/app/services/panier.service';
 export class PanierPage implements OnInit {
 
   cart: CartArticle[] =[];
-  cartTotal: number;
+
   constructor(
     private cartService: PanierService
   ) { }
 
+  get cartTotal(): number {
+    return this.cartService.total;
+  }
+
   ngOnInit() {
     this.cart = this.cartService.getAll();
-    this.cartTotal = this.cartService.cartTotal();
-
   }
 
   addQty(id: number) {
     this.cartService.addQty(id);
     this.cart = this.cartService.getAll();
-    this.cartTotal = this.cartService.cartTotal();
   }
 
   remQty(id: number) {
     this.cartService.remQty(id);
     this.cart = this.cartService.getAll();
-    this.cartTotal = this.cartService.cartTotal();
-
   }
 
 }
